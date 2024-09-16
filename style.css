@@ -1,0 +1,127 @@
+body { margin: 0; background-color: #333333; }
+
+div.page {
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1.97cm 2.38cm 1.39cm 2.11cm;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.page-left {
+        .header, .content { margin-left: 3.39cm; }
+    }
+    &.page-right {
+        .header, .content { margin-right: 3.39cm; }
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.65mm;
+        margin-bottom: 1cm;
+        .number {
+            color: #ae6b5b;
+            font: 2em "方正准雅宋";
+            align-self: flex-start;
+            margin-bottom: 5mm;
+        }
+        .title {
+            color: #ae6b5b;
+            font: 1.75em "方正准雅宋";
+            margin-bottom: 5.9mm;
+            > sup {
+                vertical-align: text-top;
+                color: black;
+                font: 2.5mm "Rope Sequence Number ST";
+            }
+        }
+        .author {
+            font: 1em "华文仿宋";
+        }
+    }
+
+    .content {
+        text-align: justify;
+        font: 1em/1.75 "Times New Roman", "方正书宋";
+        p {
+            margin-block: 0;
+            &::first-letter {
+                margin-left: 2em;
+            }
+        }
+        sup {
+            vertical-align: text-top;
+            color: black;
+            font: 2.5mm "Rope Sequence Number ST";
+        }
+    }
+
+    .notes-wrapper {
+        .divider {
+            margin-bottom: 1.8mm;
+        }
+        .notes {
+            column-count: 2;
+            orphans: 1;
+            widows: 1;
+            .note {
+                font-size: 0.75em;
+                display: flex;
+                align-items: baseline;
+                .number {
+                    font-family: "Rope Sequence Number ST";
+                    margin-right: 0.3em;
+                }
+                .text {
+                    font-family: "方正书宋";
+                    line-height: 1.65;
+                    text-align: justify;
+                }
+            }
+        } 
+    }
+    
+    .footer {
+        margin-top: 0.75mm;
+        .page-number {
+            font: 0.85em "Helvetica-Light";
+        }
+        .desc {
+            font: 0.75em "方正书宋";
+            margin-left: 1em;
+        }
+    }
+}
+
+@font-face {
+    font-family: "方正准雅宋";
+    src: url("fonts/FZYaSong.ttf");
+}
+@font-face {
+    font-family: "华文仿宋";
+    src: url("fonts/STFangsong.ttf");
+}
+@font-face {
+    font-family: "方正书宋";
+    src: url("fonts/FZShuSong.ttf");
+}
+@font-face {
+    font-family: "Rope Sequence Number ST";
+    src: url("fonts/RopeSequenceNumberST.ttf");
+}
+@font-face {
+    font-family: "方正兰亭中黑";
+    src: url("fonts/FZLanTingHei.ttf");
+}
+@font-face {
+    font-family: "华文楷体";
+    src: url("fonts/STKaiti.ttf");
+}
+@font-face {
+    font-family: "Helvetica-Light";
+    src: url("fonts/Helvetica-Light.otf");
+}
