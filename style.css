@@ -22,7 +22,7 @@ div.page {
         flex-direction: column;
         align-items: center;
         margin-top: 0.65mm;
-        margin-bottom: 1cm;
+        margin-bottom: 1.58cm;
         .number {
             color: #ae6b5b;
             font: 2em "方正准雅宋";
@@ -60,12 +60,17 @@ div.page {
         }
     }
 
+    .whitespace {
+        flex-grow: 1;
+    }
+
     .notes-wrapper {
         .divider {
             margin-bottom: 1.8mm;
         }
         .notes {
             column-count: 2;
+            column-gap: 13mm;
             orphans: 1;
             widows: 1;
             .note {
@@ -86,7 +91,7 @@ div.page {
     }
     
     .footer {
-        margin-top: 0.75mm;
+        margin-top: 6.4mm;
         .page-number {
             font: 0.85em "Helvetica-Light";
         }
