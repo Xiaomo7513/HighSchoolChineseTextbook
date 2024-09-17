@@ -3,7 +3,7 @@ body { margin: 0; background-color: #333333; }
 div.page {
     width: 21cm;
     height: 29.7cm;
-    padding: 1.97cm 2.38cm 1.39cm 2.11cm;
+    padding: 1.97cm 2.11cm 1.42cm;
     box-sizing: border-box;
     background-color: white;
     display: flex;
@@ -11,10 +11,24 @@ div.page {
     justify-content: space-between;
 
     &.page-left {
+        padding: 1.97cm 2.38cm 1.42cm 2.11cm;
         .header, .content { margin-left: 3.39cm; }
+        .footer {
+            flex-direction: row;
+            .desc { margin-left: 1em; }
+        }
     }
     &.page-right {
+        padding: 1.97cm 2.11cm 1.42cm 2.38cm;
         .header, .content { margin-right: 3.39cm; }
+        .footer {
+            flex-direction: row-reverse;
+            .desc { margin-right: 1em; }
+        }
+    }
+
+    > * {
+        flex-shrink: 0;
     }
 
     .header {
@@ -85,19 +99,23 @@ div.page {
                     font-family: "方正书宋";
                     line-height: 1.65;
                     text-align: justify;
+                    .pinyin {
+                        font-family: "NEU-XT";
+                    }
                 }
             }
         } 
     }
     
     .footer {
-        margin-top: 6.4mm;
+        margin-top: 7.75mm;
+        display: flex;
+        align-items: baseline;
         .page-number {
             font: 0.85em "Helvetica-Light";
         }
         .desc {
             font: 0.75em "方正书宋";
-            margin-left: 1em;
         }
     }
 }
@@ -129,4 +147,8 @@ div.page {
 @font-face {
     font-family: "Helvetica-Light";
     src: url("fonts/Helvetica-Light.otf");
+}
+@font-face {
+    font-family: "NEU-XT";
+    src: url("fonts/NEU-XT.ttf");
 }
