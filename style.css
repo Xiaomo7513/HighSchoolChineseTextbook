@@ -39,13 +39,13 @@ div.page {
         margin-bottom: 1.58cm;
         .number {
             color: #ae6b5b;
-            font: 2em "方正准雅宋";
+            font: 2em "方正准雅宋简体";
             align-self: flex-start;
             margin-bottom: 5mm;
         }
         .title {
             color: #ae6b5b;
-            font: 1.75em "方正准雅宋";
+            font: 1.75em "方正准雅宋简体";
             margin-bottom: 5.9mm;
             > sup {
                 vertical-align: text-top;
@@ -54,13 +54,13 @@ div.page {
             }
         }
         .author {
-            font: 1em "华文仿宋";
+            font: 1em "方正仿宋简体";
         }
     }
 
     .content {
         text-align: justify;
-        font: 1em/1.75 "Times New Roman", "方正书宋";
+        font: 1em/1.75 "Times New Roman", "方正书宋简体";
         display: flex;
         flex-direction: column;
         &.align-center {
@@ -98,7 +98,7 @@ div.page {
             }
             .text {
                 margin-right: 4.2mm;
-                font: 1.2em "方正兰亭中黑";
+                font: 1.2em "方正兰亭中黑简体";
             }
             .dash {
                 flex-grow: 1;
@@ -106,7 +106,7 @@ div.page {
         }
         .tip {
             text-align: justify;
-            font: 1em/1.75 "Times New Roman", "华文楷体";
+            font: 1em/1.75 "Times New Roman", "方正楷体简体";
             display: flex;
             flex-direction: column;
             margin: 2.6mm 8.8mm 0 3.7mm;
@@ -144,7 +144,7 @@ div.page {
                     margin-right: 0.3em;
                 }
                 .text {
-                    font-family: "方正书宋";
+                    font-family: "Times New Roman", "方正书宋简体";
                     line-height: 1.65;
                     text-align: justify;
                     .pinyin {
@@ -163,34 +163,34 @@ div.page {
             font: 0.85em "Helvetica-Light";
         }
         .desc {
-            font: 0.75em "方正书宋";
+            font: 0.75em "方正书宋简体";
         }
     }
 }
 
 @font-face {
-    font-family: "方正准雅宋";
-    src: url("assets/fonts/FZYaSong.ttf");
+    font-family: "方正准雅宋简体";
+    src: url("assets/fonts/FZZHUNYSJW.TTF");
 }
 @font-face {
-    font-family: "华文仿宋";
-    src: url("assets/fonts/STFangsong.ttf");
+    font-family: "方正仿宋简体";
+    src: url("assets/fonts/FZFSJW.TTF");
 }
 @font-face {
-    font-family: "方正书宋";
-    src: url("assets/fonts/FZShuSong.ttf");
+    font-family: "方正书宋简体";
+    src: url("assets/fonts/FZSSJW.TTF");
 }
 @font-face {
     font-family: "Rope Sequence Number ST";
     src: url("assets/fonts/RopeSequenceNumberST.ttf");
 }
 @font-face {
-    font-family: "方正兰亭中黑";
-    src: url("assets/fonts/FZLanTingHei.ttf");
+    font-family: "方正兰亭中黑简体";
+    src: url("assets/fonts/FZLTZHJW.TTF");
 }
 @font-face {
-    font-family: "华文楷体";
-    src: url("assets/fonts/STKaiti.ttf");
+    font-family: "方正楷体简体";
+    src: url("assets/fonts/FZKTJW.TTF");
 }
 @font-face {
     font-family: "Helvetica-Light";
