@@ -61,8 +61,19 @@ div.page {
     .content {
         text-align: justify;
         font: 1em/1.75 "Times New Roman", "方正书宋";
+        display: flex;
+        flex-direction: column;
+        &.align-center {
+            align-items: center;
+        }
         p {
             margin-block: 0;
+            &.align-center {
+                align-self: center;
+            }
+            &.align-right {
+                align-self: flex-end;
+            }
             &::first-letter {
                 margin-left: 2em;
             }
@@ -74,13 +85,50 @@ div.page {
         }
     }
 
+    .learning-tips {
+        margin-left: 4.6mm;
+        margin-right: -0.5mm;
+        margin-top: 2.08cm;
+        .title {
+            display: flex;
+            align-items: center;
+            color: #ae6b5b;
+            .icon {
+                margin-right: 4.2mm;
+            }
+            .text {
+                margin-right: 4.2mm;
+                font: 1.2em "方正兰亭中黑";
+            }
+            .dash {
+                flex-grow: 1;
+            }
+        }
+        .tip {
+            text-align: justify;
+            font: 1em/1.75 "Times New Roman", "华文楷体";
+            display: flex;
+            flex-direction: column;
+            margin: 2.6mm 8.8mm 0 3.7mm;
+            &.align-center {
+                align-items: center;
+            }
+            p {
+                margin-block: 0;
+                &::first-letter {
+                    margin-left: 2em;
+                }
+            }
+        }
+    }
+
     .whitespace {
         flex-grow: 1;
     }
 
     .notes-wrapper {
         .divider {
-            margin-bottom: 1.8mm;
+            margin-bottom: 1.9mm;
         }
         .notes {
             column-count: 2;
@@ -122,33 +170,33 @@ div.page {
 
 @font-face {
     font-family: "方正准雅宋";
-    src: url("fonts/FZYaSong.ttf");
+    src: url("assets/fonts/FZYaSong.ttf");
 }
 @font-face {
     font-family: "华文仿宋";
-    src: url("fonts/STFangsong.ttf");
+    src: url("assets/fonts/STFangsong.ttf");
 }
 @font-face {
     font-family: "方正书宋";
-    src: url("fonts/FZShuSong.ttf");
+    src: url("assets/fonts/FZShuSong.ttf");
 }
 @font-face {
     font-family: "Rope Sequence Number ST";
-    src: url("fonts/RopeSequenceNumberST.ttf");
+    src: url("assets/fonts/RopeSequenceNumberST.ttf");
 }
 @font-face {
     font-family: "方正兰亭中黑";
-    src: url("fonts/FZLanTingHei.ttf");
+    src: url("assets/fonts/FZLanTingHei.ttf");
 }
 @font-face {
     font-family: "华文楷体";
-    src: url("fonts/STKaiti.ttf");
+    src: url("assets/fonts/STKaiti.ttf");
 }
 @font-face {
     font-family: "Helvetica-Light";
-    src: url("fonts/Helvetica-Light.otf");
+    src: url("assets/fonts/Helvetica-Light.otf");
 }
 @font-face {
     font-family: "NEU-XT";
-    src: url("fonts/NEU-XT.ttf");
+    src: url("assets/fonts/NEU-XT.ttf");
 }
