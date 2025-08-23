@@ -15,7 +15,7 @@ div.page {
         .header, .content { margin-left: 3.39cm; }
         .footer {
             flex-direction: row;
-            .desc { margin-left: 1em; }
+            .footer-text { margin-left: 1em; }
         }
     }
     &.page-right {
@@ -23,7 +23,7 @@ div.page {
         .header, .content { margin-right: 3.39cm; }
         .footer {
             flex-direction: row-reverse;
-            .desc { margin-right: 1em; }
+            .footer-text { margin-right: 1em; }
         }
     }
 
@@ -37,7 +37,7 @@ div.page {
         align-items: center;
         margin-top: 0.65mm;
         margin-bottom: 1.58cm;
-        .number {
+        .num {
             color: #ae6b5b;
             font: 2em "方正准雅宋简体";
             align-self: flex-start;
@@ -68,6 +68,10 @@ div.page {
         }
         p {
             margin-block: 0;
+            overflow: hidden;
+            &.truncated {
+                text-align-last: justify;
+            }
             &.align-center {
                 align-self: center;
             }
@@ -77,6 +81,9 @@ div.page {
             &::first-letter {
                 margin-left: 2em;
             }
+            &.no-tab::first-letter {
+                margin-left: 0;
+            }
         }
         sup {
             vertical-align: text-top;
@@ -85,7 +92,7 @@ div.page {
         }
     }
 
-    .learning-tips {
+    .learning-tip {
         margin-left: 4.6mm;
         margin-right: -0.5mm;
         margin-top: 2.08cm;
@@ -133,15 +140,15 @@ div.page {
         .notes {
             column-count: 2;
             column-gap: 13mm;
-            orphans: 1;
+            orphans: 2;
             widows: 1;
             .note {
                 font-size: 0.75em;
                 display: flex;
                 align-items: baseline;
-                .number {
+                .num {
                     font-family: "Rope Sequence Number ST";
-                    margin-right: 0.3em;
+                    margin-right: 0.6em;
                 }
                 .text {
                     font-family: "Times New Roman", "方正书宋简体";
@@ -159,10 +166,10 @@ div.page {
         margin-top: 7.75mm;
         display: flex;
         align-items: baseline;
-        .page-number {
+        .page-num {
             font: 0.85em "Helvetica-Light";
         }
-        .desc {
+        .footer-text {
             font: 0.75em "方正书宋简体";
         }
     }
@@ -199,4 +206,9 @@ div.page {
 @font-face {
     font-family: "NEU-XT";
     src: url("assets/fonts/NEU-XT.ttf");
+}
+@font-face {
+    font-family: "Times New Roman";
+    src: url("assets/fonts/times.ttf");
+    unicode-range: U+21-FF, U+0370-03FF;
 }
